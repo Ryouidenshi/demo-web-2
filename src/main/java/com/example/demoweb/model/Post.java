@@ -13,7 +13,7 @@ public class Post implements Serializable {
     @Id
     @GeneratedValue
     private String text;
-    private int likes;
+    private Integer likes;
     private Date creationDate;
     private Long id;
 
@@ -27,7 +27,7 @@ public class Post implements Serializable {
         this.id = id;
     }
 
-    public int getLikes() {
+    public Integer getLikes() {
         return likes;
     }
 
@@ -43,7 +43,7 @@ public class Post implements Serializable {
         return text;
     }
 
-    public void setLikes(int likes) {
+    public void setLikes(Integer likes) {
         this.likes = likes;
     }
 }

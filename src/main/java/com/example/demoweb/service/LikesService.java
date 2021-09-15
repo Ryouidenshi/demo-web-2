@@ -1,6 +1,5 @@
 package com.example.demoweb.service;
 
-
 import com.example.demoweb.model.Post;
 import com.example.demoweb.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
