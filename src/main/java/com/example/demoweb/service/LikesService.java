@@ -11,6 +11,7 @@ public class LikesService {
 
     @Autowired
     PostRepository postRepository;
+
     public int like(Long postId) {
         Post post = postRepository.findById(postId).get();
         post.setLikes(post.getLikes() + 1);

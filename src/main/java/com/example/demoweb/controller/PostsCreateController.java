@@ -14,6 +14,7 @@ public class PostsCreateController {
 
     @RequestMapping(path = "/new", method = RequestMethod.GET)
     public String list(Model model) {
+        model.addAttribute("appName", "Моё супер приложение!");
         return "create";
     }
 
