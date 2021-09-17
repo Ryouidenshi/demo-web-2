@@ -1,8 +1,15 @@
-<div class="container" xmlns:th="http://www.w3.org/1999/xhtml">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>TODO</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div class="container">
     <h1 th:text="${appName}" style="color: green">Default app name</h1>
     <hr/>
     <div class="content">
@@ -14,9 +21,7 @@
                 <p class="description-text" th:text="${post.text}">Text</p>
             </div>
             <div class="col-md-1">
-                <button class="btn btn-sm btn-secondary like"
-                        th:text="${post.likes + ' ❤'}"
-                        th:attr="data-post-id=${post.id}">0 ❤</button>
+                <button th:attr="data-post-id=${post.id}" class="btn btn-sm btn-secondary like" th:text="${post.likes + ' ❤'}">0 ❤</button>
             </div>
             <div class="col-md-12">
                 <hr/>
@@ -24,3 +29,5 @@
         </div>
     </div>
 </div>
+</body>
+</html>

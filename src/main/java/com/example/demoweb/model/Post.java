@@ -1,21 +1,22 @@
 package com.example.demoweb.model;
 
-import org.springframework.data.annotation.Id;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Date;
 
 @Entity
 public class Post implements Serializable {
-
     @Id
     @GeneratedValue
+    private Long id;
+
     private String text;
     private Integer likes;
     private Date creationDate;
-    private Long id;
+
+
 
     public Post() {
 
@@ -25,6 +26,7 @@ public class Post implements Serializable {
         this.text=text;
         this.creationDate = creationDate;
         this.id = id;
+        this.likes = 0;
     }
 
     public Integer getLikes() {
